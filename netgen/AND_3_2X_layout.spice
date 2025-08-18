@@ -1,0 +1,15 @@
+* SPICE3 file created from AND_3_2X.ext - technology: gf180mcuD
+
+*.option scale=5n
+
+X0 VDD net1 Y VDD pfet_03v3 ad=34n pd=0.88m as=18.7n ps=0.45m w=340 l=60
+X1 net3 B net2 VSS nfet_03v3 ad=9.35n pd=0.28m as=9.35n ps=0.28m w=170 l=60
+X2 net1 B VDD VDD pfet_03v3 ad=18.7n pd=0.45m as=18.7n ps=0.45m w=340 l=60
+X3 VSS C net3 VSS nfet_03v3 ad=9.35n pd=0.28m as=9.35n ps=0.28m w=170 l=60
+X4 VDD C net1 VDD pfet_03v3 ad=18.7n pd=0.45m as=18.7n ps=0.45m w=340 l=60
+X5 Y net1 VSS VSS nfet_03v3 ad=9.35n pd=0.28m as=9.35n ps=0.28m w=170 l=60
+X6 net2 A net1 VSS nfet_03v3 ad=9.35n pd=0.28m as=17n ps=0.54m w=170 l=60
+X7 Y net1 VDD VDD pfet_03v3 ad=18.7n pd=0.45m as=18.7n ps=0.45m w=340 l=60
+X8 VSS net1 Y VSS nfet_03v3 ad=17n pd=0.54m as=9.35n ps=0.28m w=170 l=60
+X9 VDD A net1 VDD pfet_03v3 ad=18.7n pd=0.45m as=34n ps=0.88m w=340 l=60
+*C0 VDD VSS 2.45729f **FLOATING
