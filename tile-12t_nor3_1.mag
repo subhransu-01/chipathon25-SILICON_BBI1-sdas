@@ -1,0 +1,52 @@
+magic
+tech gf180mcuD
+timestamp 1756609004
+use gf180mcu_osu_sc_gp12t3v3__nor3_1  gf180mcu_osu_sc_gp12t3v3__nor3_1_0
+timestamp 1756569873
+transform 1 0 3 0 1 0
+box -3 0 75 166
+use gf180mcu_osu_sc_gp12t3v3__nor3_1  gf180mcu_osu_sc_gp12t3v3__nor3_1_1
+timestamp 1756569873
+transform 1 0 81 0 1 0
+box -3 0 75 166
+use gf180mcu_osu_sc_gp12t3v3__nor3_1  gf180mcu_osu_sc_gp12t3v3__nor3_1_2
+timestamp 1756569873
+transform 1 0 159 0 1 0
+box -3 0 75 166
+use gf180mcu_osu_sc_gp12t3v3__nor3_1  gf180mcu_osu_sc_gp12t3v3__nor3_1_3
+timestamp 1756569873
+transform 1 0 237 0 1 0
+box -3 0 75 166
+use gf180mcu_osu_sc_gp12t3v3__nor3_1  gf180mcu_osu_sc_gp12t3v3__nor3_1_4
+timestamp 1756569873
+transform 1 0 3 0 -1 332
+box -3 0 75 166
+use gf180mcu_osu_sc_gp12t3v3__nor3_1  gf180mcu_osu_sc_gp12t3v3__nor3_1_5
+timestamp 1756569873
+transform 1 0 81 0 -1 332
+box -3 0 75 166
+use gf180mcu_osu_sc_gp12t3v3__nor3_1  gf180mcu_osu_sc_gp12t3v3__nor3_1_6
+timestamp 1756569873
+transform 1 0 159 0 -1 332
+box -3 0 75 166
+use gf180mcu_osu_sc_gp12t3v3__nor3_1  gf180mcu_osu_sc_gp12t3v3__nor3_1_7
+timestamp 1756569873
+transform 1 0 237 0 -1 332
+box -3 0 75 166
+use gf180mcu_osu_sc_gp12t3v3__nor3_1  gf180mcu_osu_sc_gp12t3v3__nor3_1_8
+timestamp 1756569873
+transform 1 0 3 0 -1 0
+box -3 0 75 166
+use gf180mcu_osu_sc_gp12t3v3__nor3_1  gf180mcu_osu_sc_gp12t3v3__nor3_1_9
+timestamp 1756569873
+transform 1 0 81 0 -1 0
+box -3 0 75 166
+use gf180mcu_osu_sc_gp12t3v3__nor3_1  gf180mcu_osu_sc_gp12t3v3__nor3_1_10
+timestamp 1756569873
+transform 1 0 159 0 -1 0
+box -3 0 75 166
+use gf180mcu_osu_sc_gp12t3v3__nor3_1  gf180mcu_osu_sc_gp12t3v3__nor3_1_11
+timestamp 1756569873
+transform 1 0 237 0 -1 0
+box -3 0 75 166
+<< end >>
