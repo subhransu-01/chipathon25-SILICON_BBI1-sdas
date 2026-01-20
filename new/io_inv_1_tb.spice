@@ -1,0 +1,61 @@
+** sch_path: /home/subhransu/gitRepo/gf180mcu_ocd_io-sdas/xschem/io_inv_1_tb.sch
+**.subckt io_inv_1_tb Vout
+*.opin Vout
+x1 Vin Vout VDD VSS io_inv_1
+V1 VSS GND 0
+V2 VDD GND 1.8
+V3 Vin GND 0 PULSE(0 1.8 0 1n 1n 10n 20n)
+C1 Vout GND 1f m=1
+**** begin user architecture code
+
+.include /home/subhransu/share/pdk/gf180mcuD/libs.tech/ngspice/design.ngspice
+.lib /home/subhransu/share/pdk/gf180mcuD/libs.tech/ngspice/sm141064.ngspice typical
+
+
+
+
+*.TEMP
+.PARAM PAR_VDD=1.8
+
+** Rise/Fall 10-90%
+.MEASURE TRAN tr1090 TRIG v(vout) VAL='0.1*PAR_VDD' RISE=1 TARG v(vout) VAL='0.9*PAR_VDD' RISE=1
+.MEASURE TRAN tf9010 TRIG v(vout) VAL='0.9*PAR_VDD' FALL=1 TARG v(vout) VAL='0.1*PAR_VDD' FALL=1
+
+** Delay Rise Fall
+.MEASURE TRAN tdrise TRIG v(vin)  VAL='0.5*PAR_VDD' RISE=1 TARG v(vout) VAL='0.5*PAR_VDD' RISE=1
+.MEASURE TRAN tdfall TRIG v(vin)  VAL='0.5*PAR_VDD' FALL=1 TARG v(vout) VAL='0.5*PAR_VDD' FALL=1
+.control
+
+
+	   save all
+
+op
+
+    write inverter_tb.raw
+    set appendwrite
+
+	TRAN 0.1n 50n
+plot v(Vin) v(Vout)
+.endc
+
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  io_inv_1.sym # of pins=4
+** sym_path: /home/subhransu/gitRepo/gf180mcu_ocd_io-sdas/xschem/io_inv_1.sym
+** sch_path: /home/subhransu/gitRepo/gf180mcu_ocd_io-sdas/xschem/io_inv_1.sch
+.subckt io_inv_1 IN OUT VDD VSS
+*.opin OUT
+*.ipin IN
+*.iopin VDD
+*.iopin VSS
+XM2 OUT IN VSS VSS nfet_03v3 L=0.28u W=0.6u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM4 OUT IN VDD VDD pfet_03v3 L=0.28u W=1.2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+.ends
+
+.GLOBAL GND
+.end
